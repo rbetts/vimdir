@@ -77,5 +77,7 @@ noremap <silent> ,mj <C-W>J     " Move the current window to the bottom of the m
 " map Ctrl-Enter to Escape to exit insert-mode
 inoremap <C-CR> <Esc>
 inoremap jj <Esc>
-
 noremap ; :
+
+" reasonable completion menu behavior for clang_complete
+set completeopt = "menu, preview, longest"

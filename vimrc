@@ -1,7 +1,8 @@
 set nocp
 
 " set up pathogen
-filetype off
+filetype on     "filetype off (when off) causes non-zero vim $?
+filetype off    "filetype off for pathogon.
 call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 

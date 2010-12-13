@@ -1,3 +1,6 @@
+let g:zenesque_colors=3
+colorscheme zenesque
+
 set nocp
 
 " set up pathogen
@@ -27,17 +30,15 @@ set cmdheight=2
 set showmode
 set showmatch
 set wildmenu
+set guioptions-=T       " turn of toolbar
+set guifont=Inconsolata
 
 syntax on
-
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set expandtab
-
-" C indentation options.
-set cinoptions=:2,=2,l1,g2,h2,t0,(0,W4,j1
-
+set cinoptions=:2,=2,l1,g2,h2,t0,(0,W4,j1   " C indentation options.
 set nowrap
 set scrolloff=5         " keep n lines top/bottom for scope
 
@@ -81,4 +82,9 @@ inoremap jj <Esc>
 noremap ; :
 
 " reasonable completion menu behavior for clang_complete
-set completeopt = "menu, preview, longest"
+set completeopt=menu,longest,preview
+
+" add git branch to status line
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P\ %{fugitive#statusline()}
+
+

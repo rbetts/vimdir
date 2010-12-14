@@ -33,6 +33,9 @@ set wildmenu
 set guioptions-=T       " turn of toolbar
 set guifont=Inconsolata
 
+" reduce vertical cursor width in insert mode.
+set guicursor="n-v-c:block-Cursor/lCursor, ve:ver35-Cursor, o:hor50-Cursor, i-ci:ver5-Cursor/lCursor, r-cr:hor20-Cursor/lCursor, sm:block-Cursor -blinkwait175-blinkoff150-blinkon175"
+
 syntax on
 set shiftwidth=4
 set tabstop=4

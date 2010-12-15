@@ -2,6 +2,7 @@ let g:zenesque_colors=3
 colorscheme zenesque
 
 set nocp
+set backspace=2  " backspace over the whole world.
 
 " set up pathogen
 filetype on     "filetype off (when off) causes non-zero vim $?

@@ -53,7 +53,7 @@ fun! <SID>StripTrailingWhitespaces()
     %s/\s\+$//e
     call cursor(l, c)
 endfun
-autocmd FileType c,cpp,java,py autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType css,xml,c,cpp,java,py autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 " Folding commands. Not really sure about these yet.
 " set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
@@ -80,15 +80,20 @@ noremap <silent> ,mk <C-W>K     " Move the current window to the top of the main
 noremap <silent> ,mh <C-W>H     " Move the current window to the left of the main Vim window
 noremap <silent> ,mj <C-W>J     " Move the current window to the bottom of the main Vim window
 
-" map Ctrl-Enter to Escape to exit insert-mode
-inoremap <C-CR> <Esc>
-inoremap jj <Esc>
-noremap ; :
+
+" Use CTRL-S for saving, also in Insert mode
+noremap <silent> <C-s>  :update<CR>
+vnoremap <silent> <C-s> <C-C>:update<CR>
+inoremap <silent> <C-s> <C-O>:update<CR>
 
 " reasonable completion menu behavior for clang_complete
 set completeopt=menu,longest,preview
+" nmap <silent> <leader>ee <Esc>:call g:ClangUpdateQuickFix()<CR>
 
 " add git branch to status line
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P\ %{fugitive#statusline()}
 
-
+" map Ctrl-Enter to Escape to exit insert-mode
+inoremap <C-CR> <Esc>
+inoremap jj <Esc>
+noremap ; :

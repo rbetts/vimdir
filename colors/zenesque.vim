@@ -290,8 +290,8 @@ elseif exists('g:zenesque_colors') && g:zenesque_colors==3
     hi FoldColumn   guifg=#555555          guibg=#414141   gui=bold
     hi Folded       guifg=#828282          guibg=#212121   gui=italic
 
-    hi IncSearch    guifg=#000000          guibg=#adadad   gui=NONE
-    hi Search       guifg=#000000          guibg=#c5c3c3   gui=NONE
+    hi IncSearch    guifg=fg          guibg=bg   gui=underline,bold
+    hi Search       guifg=fg          guibg=bg   gui=underline,bold
     hi MatchParen   guifg=#000000          guibg=#a8a8a8   gui=bold
     hi ModeMsg      guifg=#ffffff          guibg=#767676   gui=bold
     hi MoreMsg      guifg=#7c7c7c          guibg=bg        gui=bold

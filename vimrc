@@ -10,6 +10,7 @@ filetype off    "filetype off for pathogon.
 call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 
+set path=.**,,**        " curr file's cwd and vim's cwd descending
 set hidden              " allow modified buffers to be hidden
 set switchbuf=useopen   " don't make new buffers when switching
 set vb                  " virtual bell vs. beep

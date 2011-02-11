@@ -1,0 +1,17 @@
+See:
+http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+
+Add:
+cd ~/.vim
+git submodule add http://.../foo.git bundle/foo
+git add .
+git commit
+
+Clone:
+git clone http://.../vim.git ~/.vim
+cd .vim
+git submodule init
+git submodule update
+
+Update:
+just git pull the submodule (from its subdir).

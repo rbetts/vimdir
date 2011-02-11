@@ -32,7 +32,7 @@ set cmdheight=2
 set showmode
 set showmatch
 set wildmenu
-set guioptions-=T       " turn of toolbar
+set guioptions=a        " turn of toolbar, menu, scrollbars
 set guifont=Inconsolata
 
 " reduce vertical cursor width in insert mode.
@@ -98,3 +98,6 @@ set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P\ %{fugitive#statusline()}
 inoremap <C-CR> <Esc>
 inoremap jj <Esc>
 noremap ; :
+
+" use the bundled matchit.vim
+source $VIMRUNTIME/macros/matchit.vim

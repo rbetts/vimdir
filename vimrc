@@ -92,4 +92,6 @@ set completeopt=menu,longest,preview
 " add git branch to status line
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P\ %{fugitive#statusline()}
 
+" use the bundled matchit.vim
+source $VIMRUNTIME/macros/matchit.vim
 

@@ -32,7 +32,7 @@ set cmdheight=2
 set showmode
 set showmatch
 set wildmenu
-set guioptions-=T       " turn of toolbar
+set guioptions=a        " turn of toolbar, menu, scrollbars
 set guifont=Inconsolata
 
 " reduce vertical cursor width in insert mode.

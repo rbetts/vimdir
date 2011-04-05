@@ -1,5 +1,10 @@
-let g:zenesque_colors=3
-colorscheme zenesque
+" let g:zenesque_colors=3
+" colorscheme zenesque
+
+let g:solarized_termcolors=16
+set background=dark
+colorscheme solarized
+" colorscheme molokai
 
 set nocp
 set backspace=2  " backspace over the whole world.

@@ -14,4 +14,4 @@ git submodule init
 git submodule update
 
 Update:
-just git pull the submodule (from its subdir).
+"git pull https://gihub/..." the submodule (from its subdir).

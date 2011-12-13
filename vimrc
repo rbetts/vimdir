@@ -39,7 +39,9 @@ set cmdheight=2
 set showmode
 set showmatch
 set wildmenu
-set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class
+
+set wildignore=.svn,CVS,.git,*.o,*.obj,*.class,*.jar,*~,*.pyc,*.so,*.a
+
 set guioptions=a        " turn of toolbar, menu, scrollbars
 set guifont=Inconsolata:h14
 
@@ -62,7 +64,7 @@ fun! <SID>StripTrailingWhitespaces()
     %s/\s\+$//e
     call cursor(l, c)
 endfun
-autocmd FileType css,xml,c,cpp,java,py,javascript,html autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType css,xml,c,cpp,h,java,py,javascript,html autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 " Folding commands. Not really sure about these yet.
 " set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
@@ -100,18 +102,9 @@ set winheight=5
 set winminheight=5
 set winheight=999
 
-
 " Use CTRL-S for saving, also in Insert mode
 noremap <silent> <C-s>  :update<CR>
 inoremap <silent> <C-s> <C-O>:update<CR>
-
-" reasonable completion menu behavior for clang_complete
-" set completeopt=menu,longest,preview
-let g:clang_user_options='|| exit 0'
-let g:clang_periodic_quickfix=1
-let g:clang_user_library=1
-let g:clang_library_path="/home/rbetts/src/llvm_build/Release+Asserts/lib"
-" nmap <silent> <leader>ee <Esc>:call g:ClangUpdateQuickFix()<CR>
 
 " add git branch to status line
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P\ %{fugitive#statusline()}

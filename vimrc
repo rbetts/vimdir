@@ -91,6 +91,16 @@ noremap <silent> ,mk <C-W>K     " Move the current window to the top of the main
 noremap <silent> ,mh <C-W>H     " Move the current window to the left of the main Vim window
 noremap <silent> ,mj <C-W>J     " Move the current window to the bottom of the main Vim window
 
+" From destroyallsoftware - turn splits into a sized stack. We'll see...
+set winwidth=84
+" We have to have a winheight bigger than we want to set winminheight. But if
+" we set winheight to be huge before winminheight, the winminheight set will
+" fail.
+set winheight=5
+set winminheight=5
+set winheight=999
+
+
 " Use CTRL-S for saving, also in Insert mode
 noremap <silent> <C-s>  :update<CR>
 inoremap <silent> <C-s> <C-O>:update<CR>

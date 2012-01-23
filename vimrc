@@ -43,7 +43,7 @@ set wildmenu
 set wildignore=.svn,CVS,.git,*.o,*.obj,*.class,*.jar,*~,*.pyc,*.so,*.a
 
 set guioptions=a        " turn of toolbar, menu, scrollbars
-set guifont=Inconsolata:h14
+set guifont=Inconsolata
 
 " reduce vertical cursor width in insert mode.
 set guicursor="n-v-c:block-Cursor/lCursor, ve:ver35-Cursor, o:hor50-Cursor, i-ci:ver5-Cursor/lCursor, r-cr:hor20-Cursor/lCursor, sm:block-Cursor -blinkwait175-blinkoff150-blinkon175"
@@ -69,7 +69,7 @@ autocmd FileType css,xml,c,cpp,h,java,py,javascript,html autocmd BufWritePre <bu
 " Folding commands. Not really sure about these yet.
 " set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 set foldmethod=syntax
-set foldnestmax=10
+set foldnestmax=2
 set nofoldenable
 set foldlevel=0
 
@@ -106,6 +106,26 @@ set winheight=999
 noremap <silent> <C-s>  :update<CR>
 inoremap <silent> <C-s> <C-O>:update<CR>
 
+<<<<<<< HEAD
+=======
+" reasonable completion menu behavior for clang_complete
+" set completeopt=menu,longest,preview
+" let g:clang_user_options='|| exit 0'
+" let g:clang_periodic_quickfix=1
+" let g:clang_user_library=1
+" let g:clang_library_path="/home/rbetts/src/llvm_build/Release+Asserts/lib"
+" nmap <silent> <leader>ee <Esc>:call g:ClangUpdateQuickFix()<CR>
+
+let g:EclimJavaSearchSingleResult='edit'
+let g:EclimValidateSortResults = 'severity'
+
+
+" auto-highlight the first selection the tab completion list
+let g:SuperTabLongestHighlight=1
+set completeopt=menu,longest,preview
+" disable include searching for completions.
+set complete-=i
+
 " add git branch to status line
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P\ %{fugitive#statusline()}
 
@@ -120,4 +140,8 @@ source $VIMRUNTIME/macros/matchit.vim
 " Use suggested Gundo binding
 nnoremap <F5> :GundoToggle<CR>
 
+" protobuf highlighting
+augroup filetype
+  au! BufRead,BufNewFile *.proto setfiletype proto
+augroup end
 

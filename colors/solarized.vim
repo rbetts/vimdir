@@ -657,8 +657,8 @@ exe "hi SpecialKey"     . s:fg_base02 .s:bg_none   .s:fmt_none
 exe "hi NonText"        . s:fg_base02 .s:bg_none   .s:fmt_bold
 exe "hi Directory"      . s:fg_blue   .s:bg_none   .s:fmt_none
 exe "hi ErrorMsg"       . s:fg_red    .s:bg_none   .s:fmt_revr
-exe "hi IncSearch"      . s:fg_yellow .s:bg_none   .s:fmt_revr
-exe "hi Search"         . s:fg_yellow .s:bg_none   .s:fmt_stnd
+exe "hi IncSearch"      . s:fg_none   .s:bg_none   .s:fmt_undr
+exe "hi Search"         . s:fg_none   .s:bg_none   .s:fmt_undr
 exe "hi MoreMsg"        . s:fg_blue   .s:bg_none   .s:fmt_none
 exe "hi ModeMsg"        . s:fg_blue   .s:bg_none   .s:fmt_none
 exe "hi LineNr"         . s:fg_base01 .s:bg_base02 .s:fmt_none

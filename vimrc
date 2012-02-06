@@ -24,6 +24,7 @@ set incsearch           " search is incremental
 set hlsearch            " search highlights
 set wrapscan            " wrap searches
 set noswapfile
+set nobackup            " do not keep backups (for write/renames)
 set ruler               " cursor position
 set laststatus=2        " show the status line.
 set cmdheight=2

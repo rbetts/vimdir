@@ -1,5 +1,5 @@
 let g:solarized_termcolors=16
-set background=dark
+set background=light
 colorscheme solarized
 
 " set up pathogen
@@ -96,7 +96,10 @@ set complete-=i
 
 let g:EclimJavaSearchSingleResult='edit'
 let g:EclimValidateSortResults = 'severity'
+let g:EclimJavaImportPackageSeparationLevel = 2
 noremap ,im :JavaImportMissing<CR>
+noremap ,is :JavaImportSort<CR>
+noremap ,pp :ProjectProblems<CR>
 
 " auto-highlight the first selection the tab completion list
 let g:SuperTabLongestHighlight=1
